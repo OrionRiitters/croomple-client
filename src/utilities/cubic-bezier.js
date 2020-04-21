@@ -5,6 +5,8 @@ export default {
             p2: [.42,0],
             p3: [1,1]
         }
+        // two functions below from user AKX @
+        // https://stackoverflow.com/questions/9194558/center-point-on-html-quadratic-curve
         function _getQBezierValue(t, p1, p2, p3) {
             var iT = 1 - t;
             return iT * iT * p1 + 2 * iT * t * p2 + t * t * p3;
