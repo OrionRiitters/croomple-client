@@ -1,10 +1,13 @@
+const easeInPoints = {
+    p1: [0,0],
+    p2: [.42,0],
+    p3: [1,1]
+}
+// TODO: add in points for ease and ease-out 
+// (ease requires more control points, which the functions below don't currently accept)
+
 export default {
     easeIn: t => {
-        const points = {
-            p1: [0,0],
-            p2: [.42,0],
-            p3: [1,1]
-        }
         // two functions below from user AKX @
         // https://stackoverflow.com/questions/9194558/center-point-on-html-quadratic-curve
         function _getQBezierValue(t, p1, p2, p3) {
@@ -18,6 +21,6 @@ export default {
                 y:  _getQBezierValue(position, startY, cpY, endY)
             };
         }
-        return getQuadraticCurvePoint(points.p1[0], points.p1[1], points.p2[0], points.p2[1], points.p3[0], points.p3[1], t)
+        return getQuadraticCurvePoint(easeInPoints.p1[0], easeInPoints.p1[1], easeInPoints.p2[0], easeInPoints.p2[1], easeInPoints.p3[0], easeInPoints.p3[1], t)
     },
 }

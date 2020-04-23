@@ -5,8 +5,26 @@
     background-color: white;
     height: 500px;
     width: 100%;
+    .animated-box {
+        background-color: black;
+        position: absolute;
+        height: 100px;
+        width: 100px;
+    }
     canvas {
         height: 500px !important;
         width: 500px !important;
+    }
+    img {
+        opacity: 1;
+        position: absolute;
+        right: 100px;
+        top: 0px;
+        height: 500px;
+        width: auto;
+        &.hide {
+            opacity: 0;
+            transition: opacity 4s;
+        }
     }
 }
